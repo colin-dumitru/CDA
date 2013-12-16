@@ -21,7 +21,7 @@ body {
 }
 
 .debt_container .name{
-    width: 50%;
+    width: 45%;
     overflow: hidden;
 }
 
@@ -31,7 +31,7 @@ body {
 }
 
 .debt_container .timeLeft{
-    width: 25%;
+    width: 30%;
     overflow: hidden;
     font-family: 'Inconsolata', sans-serif;
     text-shadow: none;

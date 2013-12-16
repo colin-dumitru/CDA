@@ -18,7 +18,7 @@ function updateTime() {
         var elem = timeElements[i],
             time = new Date(elem.start - Date.now()),
             diff = dateDiff(Math.abs(time)),
-            sign = ' ';
+            sign = '&nbsp;';
 
         if (time < 0) {
             sign = '-';
@@ -27,7 +27,7 @@ function updateTime() {
             elem.elem.css('color', 'green');
         }
 
-        elem.elem.text(sign + pad(diff.d, 5) + ':' + pad(diff.h,2,'0') + ':' + pad(diff.m,2,'0') + ':' + pad(diff.s,2,'0'));
+        elem.elem.html(sign + pad(diff.d, 5) + ':' + pad(diff.h,2,'0') + ':' + pad(diff.m,2,'0') + ':' + pad(diff.s,2,'0'));
     }
 }
 
@@ -47,7 +47,7 @@ function pad(str, len, pad_str) {
     if (len <= str.length) {
         return str;
     } else {
-        return (pad_str || ' ') + pad(str, len - 1, pad_str);
+        return (pad_str || '&nbsp;') + pad(str, len - 1, pad_str);
     }
 
 }
