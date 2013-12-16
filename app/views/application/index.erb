@@ -1,0 +1,12 @@
+<div class="main">
+
+  <% for debt in @debts do %>
+      <div class="debt_container">
+          <div class="name"><%= debt.name %></div>
+          <div class="sum"><%= debt.amount %></div>
+          <div class="timeLeft"><%= debt.due_date %></div>
+      </div>
+  <% end %>
+
+</div>
+

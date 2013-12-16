@@ -1,13 +1,38 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- */
+body {
+    background: #191919;
+    font-family: 'Varela Round', sans-serif;
+    text-shadow: 1px 1px #747474, -1px -1px #1a1a1a;
+    color: #e8e8e8;
+}
+
+.main{
+    width: 800px;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 3px;
+    box-shadow: 0 0 10px black;
+    border: 1px solid #1d1d1d;
+    background: #2d2d2d linear-gradient(to bottom, #2e2e2e 0%, #333333 100%);;
+    font-size: 30px;
+}
+
+.debt_container *{
+    display: inline-block;
+}
+
+.debt_container .name{
+    width: 60%;
+    overflow: hidden;
+}
+
+.debt_container .sum{
+    width: 10%;
+    overflow: hidden;
+}
+
+.debt_container .timeLeft{
+    width: 25%;
+    overflow: hidden;
+    font-family: 'Inconsolata', sans-serif;
+    text-shadow: none;
+}
