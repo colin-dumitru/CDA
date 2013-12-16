@@ -21,12 +21,12 @@ body {
 }
 
 .debt_container .name{
-    width: 60%;
+    width: 50%;
     overflow: hidden;
 }
 
 .debt_container .sum{
-    width: 10%;
+    width: 20%;
     overflow: hidden;
 }
 
