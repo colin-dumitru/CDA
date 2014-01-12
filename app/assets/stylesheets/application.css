@@ -16,6 +16,10 @@ body {
     font-size: 30px;
 }
 
+.debt_container{
+    position: relative;
+}
+
 .debt_container *{
     display: inline-block;
 }
@@ -35,4 +39,46 @@ body {
     overflow: hidden;
     font-family: 'Inconsolata', sans-serif;
     text-shadow: none;
+}
+
+.transactions{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.transaction_container{
+    position: relative;
+}
+
+.transaction_container .sum{
+    border-left: 2px solid orange;
+    text-shadow: none;
+}
+
+.transaction_container .date{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.transaction_container .comment{
+    color: #cccccc;
+}
+
+.transaction_container .add_button{
+    color: green;
+    cursor: pointer;
+    text-align: center;
+    background: #e2e2e2;
+    text-shadow: none;
+    border: 1px solid darkgrey;
+    border-radius: 2px;
+    margin-left: 700px;
+}
+
+.add {
+    background: #474747;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px black;
 }

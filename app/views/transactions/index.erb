@@ -1,0 +1,22 @@
+<script>
+  var name = "<%= @name %>";
+</script>
+
+<div class="main">
+
+  <div class="transaction_container add">
+    <div id='add_sum' class="sum" contenteditable="true">0</div>
+    <div id='add_comment' class="comment" contenteditable="true">Comment</div>
+    <div id='add_button' class="add_button">+</div>
+  </div>
+
+  <% for transaction in @transactions do %>
+      <div class="transaction_container">
+        <div class="sum"><%=  transaction.sum %></div>
+        <div class="date"><%=  transaction.created_at %></div>
+        <div class="comment"><%=  transaction.comment %></div>
+      </div>
+  <% end %>
+
+</div>
+

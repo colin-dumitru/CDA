@@ -1,8 +1,7 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
 
   def index
-    @debts = Debt.all
+    @debts = Debt.all.order(:name)
 
     render :index
   end

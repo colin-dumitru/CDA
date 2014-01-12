@@ -8,6 +8,36 @@ function start() {
         });
     });
 
+    $("#add_button").click(function() {
+        $.ajax({
+            url: '/transactions/' + encodeURIComponent(name) + '/add',
+            type: "POST",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            data: JSON.stringify({
+                sum: $('#add_sum').text(),
+                comment: $('#add_comment').text()
+            }),
+            success: function() {
+                location.reload();
+            },
+            error: function() {
+                location.reload();
+            }
+        })
+    });
+
+    $('.transaction_container').each(function() {
+        var me = $(this).find('.sum'),
+            value = parseFloat(me.text());
+
+        if (value > 0) {
+            me.css('color', 'red');
+        } else {
+            me.css('color', 'green');
+        }
+    })
+
     updateTime();
 
     setInterval(updateTime, 1000);
